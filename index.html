@@ -7,37 +7,51 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <title>Turn.js 实现翻书效果</title>
+    <title>比学赶超</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-<div class="shade">
-    <div class="sk-fading-circle">
-        <div class="sk-circle1 sk-circle"></div>
-        <div class="sk-circle2 sk-circle"></div>
-        <div class="sk-circle3 sk-circle"></div>
-        <div class="sk-circle4 sk-circle"></div>
-        <div class="sk-circle5 sk-circle"></div>
-        <div class="sk-circle6 sk-circle"></div>
-        <div class="sk-circle7 sk-circle"></div>
-        <div class="sk-circle8 sk-circle"></div>
-        <div class="sk-circle9 sk-circle"></div>
-        <div class="sk-circle10 sk-circle"></div>
-        <div class="sk-circle11 sk-circle"></div>
-        <div class="sk-circle12 sk-circle"></div>
+<div id="main">
+    <div class="title">
+        <img id="title1" src="./image/main/2020.png"></img>
+        <img id="title2" src="./image/main/3.png"></img>
+        <img id="title3" src="./image/main/2.png"></img>
     </div>
-    <div class="number"></div>
+    <div id="bg">
+        <img src="./image/main/main.png">
+    </div> 
+    <div id="intro">
+        <button  type="button" class="button red" onclick="next()">点击打开</button>
+    </div>
 </div>
-<div class="flipbook-viewport" style="display:none;">
-    <div class="previousPage"></div>
-    <div class="nextPage"></div>
-    <div class="return"></div>
-    <img class="btnImg" src="./image/btn.gif" style="display: none"/>
-    <div class="container">
-        <div class="flipbook">
+<div id="book" style="display:none;">
+    <div class="shade">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+        <div class="number"></div>
+    </div>
+    <div class="flipbook-viewport" style="display:none;">
+        <div class="previousPage"></div>
+        <div class="nextPage"></div>
+        <div class="return"></div>
+        <img class="btnImg" src="./image/btn.gif"/>
+        <div class="container">
+            <div class="flipbook"></div>
         </div>
     </div>
 </div>

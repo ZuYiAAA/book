@@ -41,31 +41,31 @@ var loading_img_url = [
     "./image/0014.jpg",
     "./image/0015.jpg",
     "./image/0016.jpg",
-    "./image/0017.jpg",
-    "./image/0018.jpg",
-    "./image/0019.jpg",
-    "./image/0020.jpg",
-    "./image/0021.jpg",
-    "./image/0022.jpg",
-    "./image/0023.jpg",
-    "./image/0024.jpg",
-    "./image/0025.jpg",
-    "./image/0026.jpg",
-    "./image/0027.jpg",
-    "./image/0028.jpg",
-    "./image/0029.jpg",
-    "./image/0030.jpg",
-    "./image/0031.jpg",
-    "./image/0032.jpg",
-    "./image/0033.jpg",
-    "./image/0034.jpg",
-    "./image/0035.jpg",
-    "./image/0036.jpg",
-    "./image/0037.jpg",
-    "./image/0038.jpg",
-    "./image/0039.jpg",
-    "./image/0040.jpg",
-    "./image/0041.jpg",
+    // "./image/0017.jpg",
+    // "./image/0018.jpg",
+    // "./image/0019.jpg",
+    // "./image/0020.jpg",
+    // "./image/0021.jpg",
+    // "./image/0022.jpg",
+    // "./image/0023.jpg",
+    // "./image/0024.jpg",
+    // "./image/0025.jpg",
+    // "./image/0026.jpg",
+    // "./image/0027.jpg",
+    // "./image/0028.jpg",
+    // "./image/0029.jpg",
+    // "./image/0030.jpg",
+    // "./image/0031.jpg",
+    // "./image/0032.jpg",
+    // "./image/0033.jpg",
+    // "./image/0034.jpg",
+    // "./image/0035.jpg",
+    // "./image/0036.jpg",
+    // "./image/0037.jpg",
+    // "./image/0038.jpg",
+    // "./image/0039.jpg",
+    // "./image/0040.jpg",
+    // "./image/0041.jpg",
 ];
 
 //加载页面
@@ -129,13 +129,13 @@ function loading() {
                         autoCenter: true,
                         when: {
                             turning: function (e, page, view) {
-                                if (page == 1) {
-                                    $(".btnImg").css("display", "none");
-                                    $(".mark").css("display", "block");
-                                } else {
-                                    $(".btnImg").css("display", "block");
-                                    $(".mark").css("display", "none");
-                                }
+                                // if (page == 1) {
+                                //     $(".btnImg").css("display", "none");
+                                //     $(".mark").css("display", "block");
+                                // } else {
+                                //     $(".btnImg").css("display", "block");
+                                //     $(".mark").css("display", "none");
+                                // }
                                 if (page == 41) {
                                     $(".nextPage").css("display", "none");
                                 } else {
@@ -145,13 +145,13 @@ function loading() {
                             turned: function (e, page, view) {
                                 console.log(page);
                                 var total = $(".flipbook").turn("pages");//总页数
-                                if (page == 1) {
-                                    $(".return").css("display", "none");
-                                    $(".btnImg").css("display", "none");
-                                } else {
-                                    $(".return").css("display", "block");
-                                    $(".btnImg").css("display", "block");
-                                }
+                                // if (page == 1) {
+                                //     $(".return").css("display", "none");
+                                //     $(".btnImg").css("display", "none");
+                                // } else {
+                                //     $(".return").css("display", "block");
+                                //     $(".btnImg").css("display", "block");
+                                // }
                                 if (page == 2) {
                                     $(".catalog").css("display", "block");
                                 } else {
@@ -190,4 +190,8 @@ function getNowFormatDate() {
     return currentdate;
 }
 
+function next(){
+    $("#main").css("display", "none");
+    $("#book").css("display", "block");
+}
 
