@@ -124,8 +124,6 @@
     $(".return").bind("touchend", function () {
         $(document).confirm('您确定要返回首页吗?', {}, function () {
             $(".flipbook").turn('page', 1); //跳转页数
-            $("#main").css("display", "block");
-            $("#book").css("display", "none");
         }, function () {
         });
     });

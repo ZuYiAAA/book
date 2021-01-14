@@ -1,6 +1,3 @@
-/**
- * Created by ChengYa on 2016/6/18.
- */
 
 //判断手机类型
 window.onload = function () {
