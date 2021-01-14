@@ -64,10 +64,10 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 41; i++) {
+                    for (var i = 1; i <= 16; i++) {
                         if (i == 1) {
                             tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else if (i == 41) {
+                        } else if (i == 16) {
                             tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else {
                             tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
@@ -108,7 +108,7 @@ function loading() {
                                 //     $(".btnImg").css("display", "block");
                                 //     $(".mark").css("display", "none");
                                 // }
-                                if (page == 41) {
+                                if (page == 16) {
                                     $(".nextPage").css("display", "none");
                                 } else {
                                     $(".nextPage").css("display", "block");
