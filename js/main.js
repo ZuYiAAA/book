@@ -204,7 +204,7 @@ function getNowFormatDate() {
 function next(){
     $("#main").fadeOut("slow");
     $("#hide").css("display","block");
-    $("#hide svg")[0].className="icon move";
+    // $("#hide svg")[0].className="icon move";
     // console.log($("#hide svg")[0].className);
     $("#book").css("display","block");
 }
