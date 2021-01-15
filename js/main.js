@@ -17,7 +17,6 @@ window.onload = function () {
     for(var i=0;i<aImgs.length;i++){
             aImgs[i].className="on";
         }
-    just_play();
     loading();
 }
 
@@ -61,8 +60,8 @@ var loading_img_url = [
     "./image/0022.jpg",
     "./image/0023.jpg",
     "./image/0024.jpg",
-    // "./image/0025.jpg",
-    // "./image/0026.jpg",
+    "./image/0025.jpg",
+    "./image/0026.jpg",
     // "./image/0027.jpg",
     // "./image/0028.jpg",
     // "./image/0029.jpg",
