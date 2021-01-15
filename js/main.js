@@ -62,13 +62,13 @@ var loading_img_url = [
         "./image/0024.jpg",
         "./image/0025.jpg",
         "./image/0026.jpg",
-        // "./image/0027.jpg",
-        // "./image/0028.jpg",
-        // "./image/0029.jpg",
-        // "./image/0030.jpg",
-        // "./image/0031.jpg",
-        // "./image/0032.jpg",
-        // "./image/0033.jpg",
+        "./image/0027.jpg",
+        "./image/0028.jpg",
+        "./image/0029.jpg",
+        "./image/0030.jpg",
+        "./image/0031.jpg",
+        "./image/0032.jpg",
+        "./image/0033.jpg",
         // "./image/0034.jpg",
         // "./image/0035.jpg",
         // "./image/0036.jpg",
@@ -103,10 +103,10 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 24; i++) {
+                    for (var i = 1; i <= 33; i++) {
                         if (i == 1) {
                             tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else if (i == 24) {
+                        } else if (i == 33) {
                             tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else {
                             tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
@@ -147,7 +147,7 @@ function loading() {
                                     // $(".btnImg").css("display", "block");
                                     $(".mark").css("display", "none");
                                 }
-                                if (page == 24) {
+                                if (page == 33) {
                                     $(".nextPage").css("display", "none");
                                 } else {
                                     $(".nextPage").css("display", "block");
