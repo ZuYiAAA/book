@@ -118,6 +118,9 @@
         if (currentPage <= pageCount) {
             $(".flipbook").turn('page', currentPage + 1);
         } else {
+            $(document).confirm('已经是最后一页了，再看一遍?', {}, function () {
+            $(".flipbook").turn('page', 1); //跳转页数
+        }
         }
     });
     //返回到目录页
