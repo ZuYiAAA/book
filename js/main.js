@@ -13,9 +13,24 @@ window.onload = function () {
         });
     } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
     }
-    //预加载
+    var aImgs=$(".title img");
+    for(var i=0;i<aImgs.length;i++){
+            aImgs[i].className="on";
+        }
+    just_play();
     loading();
 }
+
+document.addEventListener('DOMContentLoaded',function (){
+    function audioAutoPlay(){
+        just_play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+                just_play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+
 
 var date_start;
 var date_end;
@@ -188,7 +203,57 @@ function getNowFormatDate() {
 }
 
 function next(){
-    $("#main").css("display", "none");
-    $("#book").css("display", "block");
+    $("#main").fadeOut("slow");
+    $("#book").css("display","block");
 }
 
+function play_music(){
+        if ($('#mc_play').hasClass('on')){
+            $('#mc_play audio').get(0).pause();
+            $('#mc_play').attr('class','stop');
+        }else{
+            $('#mc_play audio').get(0).play();
+            $('#mc_play').attr('class','on');
+        }
+        $('#music_play_filter').hide();
+        event.stopPropagation(); //阻止冒泡
+    }
+function just_play(id){
+        $('#mc_play audio').get(0).play();
+        $('#mc_play').attr('class','on');
+        if (typeof(id)!='undefined'){
+            $('#music_play_filter').hide();
+        }
+        event.stopPropagation(); //阻止冒泡
+    }
+function is_weixn(){
+        return false;
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var play_filter=document.getElementById('music_play_filter');
+    play_filter.addEventListener('click', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchstart', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchend', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchmove', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mousedown', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mouseup', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mousemove',function(){
+        just_play(1);
+    });
