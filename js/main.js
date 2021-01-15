@@ -22,7 +22,7 @@ var date_end;
 date_start = getNowFormatDate();
 //加载图片
 var loading_img_url = [
-    "./image/0001.jpg",
+       "./image/0001.jpg",
     "./image/0002.jpg",
     "./image/0003.jpg",
     "./image/0004.jpg",
@@ -38,6 +38,31 @@ var loading_img_url = [
     "./image/0014.jpg",
     "./image/0015.jpg",
     "./image/0016.jpg",
+    "./image/0017.jpg",
+    "./image/0018.jpg",
+    "./image/0019.jpg",
+    "./image/0020.jpg",
+    "./image/0021.jpg",
+    "./image/0022.jpg",
+    "./image/0023.jpg",
+    "./image/0024.jpg",
+    // "./image/0025.jpg",
+    // "./image/0026.jpg",
+    // "./image/0027.jpg",
+    // "./image/0028.jpg",
+    // "./image/0029.jpg",
+    // "./image/0030.jpg",
+    // "./image/0031.jpg",
+    // "./image/0032.jpg",
+    // "./image/0033.jpg",
+    // "./image/0034.jpg",
+    // "./image/0035.jpg",
+    // "./image/0036.jpg",
+    // "./image/0037.jpg",
+    // "./image/0038.jpg",
+    // "./image/0039.jpg",
+    // "./image/0040.jpg",
+    // "./image/0041.jpg",
 ];
 
 //加载页面
@@ -64,10 +89,10 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 16; i++) {
+                    for (var i = 1; i <= 24; i++) {
                         if (i == 1) {
                             tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else if (i == 16) {
+                        } else if (i == 24) {
                             tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else {
                             tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
@@ -101,14 +126,14 @@ function loading() {
                         autoCenter: true,
                         when: {
                             turning: function (e, page, view) {
-                                // if (page == 1) {
-                                //     $(".btnImg").css("display", "none");
-                                //     $(".mark").css("display", "block");
-                                // } else {
-                                //     $(".btnImg").css("display", "block");
-                                //     $(".mark").css("display", "none");
-                                // }
-                                if (page == 16) {
+                                if (page == 1) {
+                                    // $(".btnImg").css("display", "none");
+                                    $(".mark").css("display", "block");
+                                } else {
+                                    // $(".btnImg").css("display", "block");
+                                    $(".mark").css("display", "none");
+                                }
+                                if (page == 24) {
                                     $(".nextPage").css("display", "none");
                                 } else {
                                     $(".nextPage").css("display", "block");
@@ -117,13 +142,13 @@ function loading() {
                             turned: function (e, page, view) {
                                 console.log(page);
                                 var total = $(".flipbook").turn("pages");//总页数
-                                // if (page == 1) {
-                                //     $(".return").css("display", "none");
-                                //     $(".btnImg").css("display", "none");
-                                // } else {
-                                //     $(".return").css("display", "block");
-                                //     $(".btnImg").css("display", "block");
-                                // }
+                                if (page == 1) {
+                                    $(".return").css("display", "none");
+                                    // $(".btnImg").css("display", "none");
+                                } else {
+                                    $(".return").css("display", "block");
+                                    // $(".btnImg").css("display", "block");
+                                }
                                 if (page == 2) {
                                     $(".catalog").css("display", "block");
                                 } else {
