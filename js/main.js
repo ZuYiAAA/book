@@ -257,10 +257,10 @@ function hide(){
 function show(){
     if($("#content").is(':hidden')){　
         $("#content").fadeIn("slow");
-        $('#contentControl').attr('src','./image/function/back.png');
+        $('#contentControl').find("img").attr('src','./image/function/back.png');
     }else{
             $("#content").fadeOut("slow");
-            $('#contentControl').attr('src','./image/function/next.png');
+            $('#contentControl').find("img").attr('src','./image/function/next.png');
     }
 }
 
