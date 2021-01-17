@@ -79,6 +79,42 @@ var loading_img_url = [
         // "./image/0041.jpg",
 ];
 
+var load_content = [
+        "./image/content/0001.jpg",
+        "./image/content/0002.jpg",
+        "./image/content/0003.jpg",
+        "./image/content/0004.jpg",
+        "./image/content/0005.jpg",
+        "./image/content/0006.jpg",
+        "./image/content/0007.jpg",
+        "./image/content/0008.jpg",
+        "./image/content/0009.jpg",
+        "./image/content/0010.jpg",
+        "./image/content/0011.jpg",
+        "./image/content/0012.jpg",
+        "./image/content/0013.jpg",
+        "./image/content/0014.jpg",
+        "./image/content/0015.jpg",
+        "./image/content/0016.jpg",
+        "./image/content/0017.jpg",
+        "./image/content/0018.jpg",
+        "./image/content/0019.jpg",
+        "./image/content/0020.jpg",
+        "./image/content/0021.jpg",
+        "./image/content/0022.jpg",
+        "./image/content/0023.jpg",
+        "./image/content/0024.jpg",
+        "./image/content/0025.jpg",
+        "./image/content/0026.jpg",
+        "./image/content/0027.jpg",
+        "./image/content/0028.jpg",
+        "./image/content/0029.jpg",
+        "./image/content/0030.jpg",
+        "./image/content/0031.jpg",
+        "./image/content/0032.jpg",
+        "./image/content/0033.jpg",
+]
+
 //加载页面
 function loading() {
     var numbers = 0;
@@ -126,6 +162,7 @@ function loading() {
                         h = $(window).height();
                         $('.flipboox').width(w).height(h);
                     });
+
                     $('.flipbook').turn({
                         // Width
                         width: w,
@@ -139,36 +176,38 @@ function loading() {
                         // Auto center this flipbook
                         autoCenter: true,
                         when: {
-                            // turning: function (e, page, view) {
-                            //     if (page == 1) {
-                            //         // $(".btnImg").css("display", "none");
-                            //         $(".mark").css("display", "block");
-                            //     } else {
-                            //         // $(".btnImg").css("display", "block");
-                            //         $(".mark").css("display", "none");
-                            //     }
-                            //     if (page == 33) {
-                            //         $(".nextPage").css("display", "none");
-                            //     } else {
-                            //         $(".nextPage").css("display", "block");
-                            //     }
-                            // },
-                            // turned: function (e, page, view) {
-                            //     console.log(page);
-                            //     var total = $(".flipbook").turn("pages");//总页数
-                            //     if (page == 1) {
-                            //         $(".return").css("display", "none");
-                            //         // $(".btnImg").css("display", "none");
-                            //     } else {
-                            //         $(".return").css("display", "block");
-                            //         // $(".btnImg").css("display", "block");
-                            //     }
-                            //     if (page == 2) {
-                            //         $(".catalog").css("display", "block");
-                            //     } else {
-                            //         $(".catalog").css("display", "none");
-                            //     }
-                            // }
+                            turning: function (e, page, view) {
+                                $("#content").find("img").attr("src",load_content[page-1]);
+                                // if (page == 1) {
+                                //     // $(".btnImg").css("display", "none");
+                                //     $(".mark").css("display", "block");
+                                // } else {
+                                //     // $(".btnImg").css("display", "block");
+                                //     $(".mark").css("display", "none");
+                                // }
+                                // if (page == 33) {
+                                //     $(".nextPage").css("display", "none");
+                                // } else {
+                                //     $(".nextPage").css("display", "block");
+                                // }
+                            },
+                            turned: function (e, page, view) {
+                                //console.log(page);
+                                $("#content").find("img").attr("src",load_content[page-1]);
+                                // var total = $(".flipbook").turn("pages");//总页数
+                                // if (page == 1) {
+                                //     $(".return").css("display", "none");
+                                //     // $(".btnImg").css("display", "none");
+                                // } else {
+                                //     $(".return").css("display", "block");
+                                //     // $(".btnImg").css("display", "block");
+                                // }
+                                // if (page == 2) {
+                                //     $(".catalog").css("display", "block");
+                                // } else {
+                                //     $(".catalog").css("display", "none");
+                                // }
+                            }
                         }
                     })
                 }
@@ -207,9 +246,28 @@ function next(){
     // $("#hide svg")[0].className="icon move";
     // console.log($("#hide svg")[0].className);
     $("#book").css("display","block");
+    $("#contentControl").css("display","block");
+
 }
+
 function hide(){
     $("#hide").fadeOut("slow");
+}
+
+function show(){
+
+    if($("#content").is(':hidden')){　
+
+    　　$("#content").fadeIn("slow");
+        $('#contentControl').attr('src','./image/function/back.png');
+    }else{
+
+    　　$("#content").fadeOut("slow");
+            $('#contentControl').attr('src','./image/function/next.png');
+
+
+    }
+     event.stopPropagation();
 }
 
 function play_music(){

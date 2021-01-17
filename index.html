@@ -22,6 +22,12 @@
             </audio>
         </a>
     </span>
+    <img id="contentControl" style="display:none; " src="./image/function/next.png" onclick="show()">
+
+    <div id="content" style="display:none; ">
+           <img src="#">
+    </div>
+
 <div id="main">
     <div class="title">
         <img id="title1" src="./image/main/2020.png"></img>
@@ -145,4 +151,52 @@
     });
 </script> -->
 </body>
+<script src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+    var meta_value = "对标先进 比学赶超";
+    var des_name="2020南昌市工业现代服务业“比学赶超”集中巡看活动回眸";
+    var shareimg="http://www.ncnews.com.cn/statics/images/2018/h5logo.png";
+    function get_wxdata(data){
+        data_str=data;
+    }
+</script>
+<script src="https://api.0791look.com/api/wechat/?action=share&id=4"></script>
+<script>
+    wx.config({
+        debug: data_str['debug'], 
+        appId: data_str['appId'], 
+        timestamp: data_str['timestamp'] , 
+        nonceStr: data_str['nonceStr'], 
+        signature: data_str['signature'],
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage'
+        ] 
+    });
+
+    wx.ready(function () {   
+        wx.onMenuShareTimeline({ 
+            desc:des_name, 
+            imgUrl: shareimg, 
+            success: function () {
+
+            },
+            cancel: function () {
+
+
+            }
+        });
+        wx.onMenuShareAppMessage({
+            desc:des_name, 
+            imgUrl: shareimg, 
+            success: function () {
+
+            },
+            cancel: function () {
+
+            }
+        });
+    });
+
+</script>
 </html>
