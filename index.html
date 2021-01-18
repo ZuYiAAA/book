@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <title>比学赶超</title>
+    <title>2020南昌市工业现代服务业“比学赶超”集中巡看活动回眸</title>
     <link rel="icon" href="./favicon.ico" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -31,128 +31,70 @@
            <img src="#">
     </div>
 
-<div id="main">
-    <div class="title">
-        <img id="title1" src="./image/main/2020.png"></img>
-        <img id="title2" src="./image/main/3.png"></img>
-        <img id="title3" src="./image/main/2.png"></img>
-    </div>
-    <div id="bg">
-        <img src="./image/main/main.png">
-    </div> 
-    <div id="intro">
-        <button  type="button" class="button red" onclick="next()">点击阅读</button>
-    </div>
-</div>
-<div id="hide" style="display:none;" onclick="hide()">
-    <div>
-        <svg t="1610691571956" class="icon " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1117" width="150" height="150">
-            <path d="M711.888 387.936a127.968 127.968 0 0 0-62.016 34.208 127.456 127.456 0 0 0-37.44 90.4l0.032 32.032L397.168 329.28a64.16 64.16 0 0 0-90.496 0 64.16 64.16 0 0 0 0 90.496l99.552 99.552a63.392 63.392 0 0 0-51.552 18.048 63.392 63.392 0 0 0-17.696 34.752l-41.056 153.856a63.808 63.808 0 0 0 16.448 61.536l74.432 74.432c80.928 80.928 212.064 80.928 292.992 0a206.032 206.032 0 0 0 60.416-141.504l0.224 0.192v-5.024-0.224l-0.032-304.768a23.264 23.264 0 0 0-28.512-22.688z m-3.712 331.744a174.192 174.192 0 0 1-51.072 119.616c-68.32 68.32-179.424 68.32-247.712 0l-74.432-74.432a31.52 31.52 0 0 1-8-30.656l41.536-156.864c0.768-4.672 2.912-11.488 8.736-17.344 9.056-9.056 19.968-9.44 25.696-8.864l44.704 4.512a16.032 16.032 0 0 0 12.928-27.232l-131.296-131.296c-12.48-12.48-12.48-32.8 0-45.248 12.48-12.48 32.8-12.48 45.248 0L600.72 578.08a31.632 31.632 0 0 0 35.456 6.4 14.016 14.016 0 0 0 8.256-12.768v-59.136c0-25.6 9.984-49.664 28.064-67.776a96.128 96.128 0 0 1 35.872-22.688l-0.192 297.568zM513.712 240.544h162.752v-32H513.712l57.92-57.92L549.008 128l-96.544 96.544 96.416 96.448 22.624-22.624z" p-id="1118" fill="#cdcdcd"></path>
-        </svg>
-        <span><p>左右划动翻页</p></span>
-    </div>
-</div>
-<div id="book" style="display:none;">
-    <div class="shade">
-        <div class="sk-fading-circle">
-            <div class="sk-circle1 sk-circle"></div>
-            <div class="sk-circle2 sk-circle"></div>
-            <div class="sk-circle3 sk-circle"></div>
-            <div class="sk-circle4 sk-circle"></div>
-            <div class="sk-circle5 sk-circle"></div>
-            <div class="sk-circle6 sk-circle"></div>
-            <div class="sk-circle7 sk-circle"></div>
-            <div class="sk-circle8 sk-circle"></div>
-            <div class="sk-circle9 sk-circle"></div>
-            <div class="sk-circle10 sk-circle"></div>
-            <div class="sk-circle11 sk-circle"></div>
-            <div class="sk-circle12 sk-circle"></div>
+    <div id="main">
+        <div class="title">
+            <img id="title1" src="./image/main/2020.png"></img>
+            <img id="title2" src="./image/main/3.png"></img>
+            <img id="title3" src="./image/main/2.png"></img>
         </div>
-        <div class="number"></div>
-    </div>
-    <div class="flipbook-viewport" style="display:none;">
-        <!-- <div class="previousPage"></div>
-        <div class="nextPage"></div>
-        <div class="return"></div>
-        <img class="btnImg" src="./image/function/btn.gif"/> -->
-        <div class="container">
-            <div class="flipbook"></div>
+        <div id="bg">
+            <img src="./image/main/main.png">
+        </div> 
+        <div id="intro">
+            <button  type="button" class="button red" onclick="next()">点击阅读</button>
         </div>
     </div>
-</div>
-<!-- <script>
-    //自定义仿iphone弹出层
-    (function ($) {
-        //ios confirm box
-        jQuery.fn.confirm = function (title, option, okCall, cancelCall) {
-            var defaults = {
-                title: null, //what text
-                cancelText: '取消', //the cancel btn text
-                okText: '确定' //the ok btn text
-            };
-
-            if (undefined === option) {
-                option = {};
-            }
-            if ('function' != typeof okCall) {
-                okCall = $.noop;
-            }
-            if ('function' != typeof cancelCall) {
-                cancelCall = $.noop;
-            }
-
-            var o = $.extend(defaults, option, {title: title, okCall: okCall, cancelCall: cancelCall});
-
-            var $dom = $(this);
-
-            var dom = $('<div class="g-plugin-confirm">');
-            var dom1 = $('<div>').appendTo(dom);
-            var dom_content = $('<div>').html(o.title).appendTo(dom1);
-            var dom_btn = $('<div>').appendTo(dom1);
-            var btn_cancel = $('<a href="#"></a>').html(o.cancelText).appendTo(dom_btn);
-            var btn_ok = $('<a href="#"></a>').html(o.okText).appendTo(dom_btn);
-            btn_cancel.on('click', function (e) {
-                o.cancelCall();
-                dom.remove();
-                e.preventDefault();
-            });
-            btn_ok.on('click', function (e) {
-                o.okCall();
-                dom.remove();
-                e.preventDefault();
-            });
-
-            dom.appendTo($('body'));
-            return $dom;
-        };
-    })(jQuery);
-
-    //上一页
-    $(".previousPage").bind("touchend", function () {
-        var pageCount = $(".flipbook").turn("pages");//总页数
-        var currentPage = $(".flipbook").turn("page");//当前页
-        if (currentPage >= 2) {
-            $(".flipbook").turn('page', currentPage - 1);
-        } else {
-        }
-    });
-    // 下一页
-    $(".nextPage").bind("touchend", function () {
-        var pageCount = $(".flipbook").turn("pages");//总页数
-        var currentPage = $(".flipbook").turn("page");//当前页
-        if (currentPage <= pageCount) {
-            $(".flipbook").turn('page', currentPage + 1);
-        } else {
-        }
-    });
-    //返回到目录页
-    $(".return").bind("touchend", function () {
-        $(document).confirm('您确定要返回首页吗?', {}, function () {
-            $(".flipbook").turn('page', 1); //跳转页数
-        }, function () {
-        });
-    });
-</script> -->
+    <div id="hide" style="display:none;" onclick="hide()">
+        <div>
+            <svg t="1610691571956" class="icon " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1117" width="150" height="150">
+                <path d="M711.888 387.936a127.968 127.968 0 0 0-62.016 34.208 127.456 127.456 0 0 0-37.44 90.4l0.032 32.032L397.168 329.28a64.16 64.16 0 0 0-90.496 0 64.16 64.16 0 0 0 0 90.496l99.552 99.552a63.392 63.392 0 0 0-51.552 18.048 63.392 63.392 0 0 0-17.696 34.752l-41.056 153.856a63.808 63.808 0 0 0 16.448 61.536l74.432 74.432c80.928 80.928 212.064 80.928 292.992 0a206.032 206.032 0 0 0 60.416-141.504l0.224 0.192v-5.024-0.224l-0.032-304.768a23.264 23.264 0 0 0-28.512-22.688z m-3.712 331.744a174.192 174.192 0 0 1-51.072 119.616c-68.32 68.32-179.424 68.32-247.712 0l-74.432-74.432a31.52 31.52 0 0 1-8-30.656l41.536-156.864c0.768-4.672 2.912-11.488 8.736-17.344 9.056-9.056 19.968-9.44 25.696-8.864l44.704 4.512a16.032 16.032 0 0 0 12.928-27.232l-131.296-131.296c-12.48-12.48-12.48-32.8 0-45.248 12.48-12.48 32.8-12.48 45.248 0L600.72 578.08a31.632 31.632 0 0 0 35.456 6.4 14.016 14.016 0 0 0 8.256-12.768v-59.136c0-25.6 9.984-49.664 28.064-67.776a96.128 96.128 0 0 1 35.872-22.688l-0.192 297.568zM513.712 240.544h162.752v-32H513.712l57.92-57.92L549.008 128l-96.544 96.544 96.416 96.448 22.624-22.624z" p-id="1118" fill="#cdcdcd"></path>
+            </svg>
+            <span><p>左右划动翻页</p></span>
+        </div>
+    </div>
+    <div id="book" style="display:none;">
+        <span class="showPage">- 1 -</span>
+        <div class="shade">
+            <div class="sk-fading-circle">
+                <div class="sk-circle1 sk-circle"></div>
+                <div class="sk-circle2 sk-circle"></div>
+                <div class="sk-circle3 sk-circle"></div>
+                <div class="sk-circle4 sk-circle"></div>
+                <div class="sk-circle5 sk-circle"></div>
+                <div class="sk-circle6 sk-circle"></div>
+                <div class="sk-circle7 sk-circle"></div>
+                <div class="sk-circle8 sk-circle"></div>
+                <div class="sk-circle9 sk-circle"></div>
+                <div class="sk-circle10 sk-circle"></div>
+                <div class="sk-circle11 sk-circle"></div>
+                <div class="sk-circle12 sk-circle"></div>
+            </div>
+            <div class="number"></div>
+        </div>
+        <div class="flipbook-viewport" style="display:none;">
+            <!-- <div class="previousPage"></div>
+            <div class="nextPage"></div>
+            <div class="return"></div>
+            <img class="btnImg" src="./image/function/btn.gif"/> -->
+            <ul class="index">
+                  <li>红谷滩区 —————————— 02</li>
+                  <li>新建区 ——————————— 05</li>
+                  <li>安义县 ——————————— 08</li>
+                  <li>湾里管理区 ————————— 10</li>
+                  <li>经开区 ——————————— 13</li>
+                  <li>青云谱区 —————————— 15</li>
+                  <li>东湖区 ——————————— 18</li>
+                  <li>西湖区 ——————————— 21</li>
+                  <li>南昌县 ——————————— 24</li>
+                  <li>进贤县 ——————————— 26</li>
+                  <li>青山湖区 —————————— 29</li>
+                  <li>高新区 ——————————— 32</li>
+            </ul>
+            <div class="container">
+                <div class="flipbook"></div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
@@ -200,6 +142,5 @@
             }
         });
     });
-
 </script>
 </html>

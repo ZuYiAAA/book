@@ -75,7 +75,7 @@
 
             // Duration of transition in milliseconds
 
-            duration: 3000,
+            duration: 1000,
 
             // First page
 

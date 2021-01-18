@@ -69,8 +69,8 @@ var loading_img_url = [
         "./image/0031.jpg",
         "./image/0032.jpg",
         "./image/0033.jpg",
-        // "./image/0034.jpg",
-        // "./image/0035.jpg",
+        "./image/0034.jpg",
+        "./image/0035.jpg",
         // "./image/0036.jpg",
         // "./image/0037.jpg",
         // "./image/0038.jpg",
@@ -113,6 +113,8 @@ var load_content = [
         "./image/content/0031.jpg",
         "./image/content/0032.jpg",
         "./image/content/0033.jpg",
+        "./image/content/0034.jpg",
+        "./image/content/0035.jpg",
 ]
 
 //加载页面
@@ -139,10 +141,10 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 33; i++) {
+                    for (var i = 1; i <= 35; i++) {
                         if (i == 1) {
                             tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else if (i == 33) {
+                        } else if (i == 35) {
                             tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else {
                             tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
@@ -178,35 +180,48 @@ function loading() {
                         when: {
                             turning: function (e, page, view) {
                                 $("#content").find("img").attr("src",load_content[page-1]);
-                                // if (page == 1) {
-                                //     // $(".btnImg").css("display", "none");
-                                //     $(".mark").css("display", "block");
-                                // } else {
-                                //     // $(".btnImg").css("display", "block");
-                                //     $(".mark").css("display", "none");
-                                // }
-                                // if (page == 33) {
-                                //     $(".nextPage").css("display", "none");
-                                // } else {
-                                //     $(".nextPage").css("display", "block");
-                                // }
+                                $(".showPage").css("display","none");
+                                $(".showPage").html("- "+[page]+" -");
+                                if (page == 1) {
+                                    $(".index").css("display", "block");
+                                    $(".showPage").css("display", "none");
+                                    $("#contentControl").css("display", "none");
+                                    // $(".mark").css("display", "block");
+                                } else {
+                                    // $(".btnImg").css("display", "block");
+                                     $(".index").css("display", "none");
+                                     $(".showPage").css("display", "block");
+                                     $("#contentControl").css("display", "block");
+
+                                }
+                                if (page == 35) {
+                                    $("#contentControl").css("display", "none");
+                                    $(".showPage").css("display", "none");
+                                } else {
+                                    $("#contentControl").css("display", "block");
+                                    $(".showPage").css("display", "block");
+                                }
                             },
                             turned: function (e, page, view) {
                                 //console.log(page);
                                 $("#content").find("img").attr("src",load_content[page-1]);
-                                // var total = $(".flipbook").turn("pages");//总页数
-                                // if (page == 1) {
-                                //     $(".return").css("display", "none");
-                                //     // $(".btnImg").css("display", "none");
-                                // } else {
-                                //     $(".return").css("display", "block");
-                                //     // $(".btnImg").css("display", "block");
-                                // }
-                                // if (page == 2) {
-                                //     $(".catalog").css("display", "block");
-                                // } else {
-                                //     $(".catalog").css("display", "none");
-                                // }
+                                $(".showPage").fadeIn("slow");
+                                $(".showPage").html("- "+[page]+" -");
+                                if (page == 1) {
+                                    $(".index").css("display", "block");
+                                    $(".showPage").css("display", "none");
+                                    // $(".mark").css("display", "block");
+                                } else {
+                                    // $(".btnImg").css("display", "block");
+                                     $(".index").css("display", "none");
+                                     $(".showPage").css("display", "block");
+                                     
+                                }
+                                if (page == 35) {
+                                   $(".showPage").css("display", "none");
+                                } else {
+                                    $(".showPage").css("display", "block");
+                                }
                             }
                         }
                     })
@@ -240,14 +255,22 @@ function getNowFormatDate() {
     return currentdate;
 }
 
+function getNumber(obj){
+  var arr=[];
+  var re=/\d+/g;
+  arr.push(obj.match(re));
+  return arr;
+};
+
 function next(){
     $("#main").fadeOut("slow");
     $("#hide").css("display","block");
-    // $("#hide svg")[0].className="icon move";
-    // console.log($("#hide svg")[0].className);
     $("#book").css("display","block");
-    $("#contentControl").css("display","block");
-
+    $(".index li").bind("click",function(){
+            $(".flipbook").turn("page",getNumber($(this).html()));
+            event.stopPropagation();
+             
+    });
 }
 
 function hide(){

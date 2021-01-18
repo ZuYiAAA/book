@@ -26,10 +26,6 @@ body{
 
 #contentControl img{ position:fixed;right:10px;bottom:20px;width:13%;margin-top:0;z-index:99999999999999;}
 #content{
-/*	background-color: black;
-	opacity: 0.8;
-	width: 100%;
-	height: 2000px;*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -206,6 +202,15 @@ background: -moz-linear-gradient(top,#b11a1a,#bf2626);
 background: linear-gradient(top,#b11a1a,#bf2626);
 }
 
+.bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bg img{
+	width: 100%;
+}
 
 #bg img{
 	width: 100%;
@@ -213,7 +218,7 @@ background: linear-gradient(top,#b11a1a,#bf2626);
 .flipbook-viewport{
 	overflow:hidden;
 	width:100%;
-	height:100%;
+	height: 100%;
 }
 
 .flipbook-viewport .container{
@@ -515,6 +520,30 @@ background: linear-gradient(top,#b11a1a,#bf2626);
 	z-index: 99999;
 	background-size: cover;
 	point-events:none;
+}
+
+/*页数显示*/
+.showPage{
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	z-index: 999999;
+}
+
+/*目录*/
+.index{
+	position: absolute;
+	top: 140px;
+	z-index: 9999999;
+	width: 80%;
+	
+}
+
+.index li{
+	height: 35px;
 }
 
 /*弹出窗口*/
