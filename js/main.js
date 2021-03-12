@@ -36,85 +36,85 @@ var date_end;
 date_start = getNowFormatDate();
 //加载图片
 var loading_img_url = [
-        "./image/0001.jpg",
-        "./image/0002.jpg",
-        "./image/0003.jpg",
-        "./image/0004.jpg",
-        "./image/0005.jpg",
-        "./image/0006.jpg",
-        "./image/0007.jpg",
-        "./image/0008.jpg",
-        "./image/0009.jpg",
-        "./image/0010.jpg",
-        "./image/0011.jpg",
-        "./image/0012.jpg",
-        "./image/0013.jpg",
-        "./image/0014.jpg",
-        "./image/0015.jpg",
-        "./image/0016.jpg",
-        "./image/0017.jpg",
-        "./image/0018.jpg",
-        "./image/0019.jpg",
-        "./image/0020.jpg",
-        "./image/0021.jpg",
-        "./image/0022.jpg",
-        "./image/0023.jpg",
-        "./image/0024.jpg",
-        "./image/0025.jpg",
-        "./image/0026.jpg",
-        "./image/0027.jpg",
-        "./image/0028.jpg",
-        "./image/0029.jpg",
-        "./image/0030.jpg",
-        "./image/0031.jpg",
-        "./image/0032.jpg",
-        "./image/0033.jpg",
-        "./image/0034.jpg",
-        "./image/0035.jpg",
-        // "./image/0036.jpg",
-        // "./image/0037.jpg",
-        // "./image/0038.jpg",
-        // "./image/0039.jpg",
-        // "./image/0040.jpg",
-        // "./image/0041.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0001.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0002.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0003.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0004.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0005.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0006.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0007.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0008.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0009.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0010.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0011.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0012.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0013.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0014.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0015.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0016.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0017.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0018.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0019.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0020.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0021.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0022.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0023.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0024.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0025.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0026.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0027.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0028.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0029.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0030.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0031.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0032.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0033.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0034.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0035.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0036.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0037.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0038.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0039.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0040.jpg",
+        // "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/0041.jpg",
 ];
 
 var load_content = [
-        "./image/content/0001.jpg",
-        "./image/content/0002.jpg",
-        "./image/content/0003.jpg",
-        "./image/content/0004.jpg",
-        "./image/content/0005.jpg",
-        "./image/content/0006.jpg",
-        "./image/content/0007.jpg",
-        "./image/content/0008.jpg",
-        "./image/content/0009.jpg",
-        "./image/content/0010.jpg",
-        "./image/content/0011.jpg",
-        "./image/content/0012.jpg",
-        "./image/content/0013.jpg",
-        "./image/content/0014.jpg",
-        "./image/content/0015.jpg",
-        "./image/content/0016.jpg",
-        "./image/content/0017.jpg",
-        "./image/content/0018.jpg",
-        "./image/content/0019.jpg",
-        "./image/content/0020.jpg",
-        "./image/content/0021.jpg",
-        "./image/content/0022.jpg",
-        "./image/content/0023.jpg",
-        "./image/content/0024.jpg",
-        "./image/content/0025.jpg",
-        "./image/content/0026.jpg",
-        "./image/content/0027.jpg",
-        "./image/content/0028.jpg",
-        "./image/content/0029.jpg",
-        "./image/content/0030.jpg",
-        "./image/content/0031.jpg",
-        "./image/content/0032.jpg",
-        "./image/content/0033.jpg",
-        "./image/content/0034.jpg",
-        "./image/content/0035.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0001.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0002.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0003.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0004.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0005.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0006.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0007.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0008.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0009.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0010.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0011.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0012.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0013.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0014.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0015.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0016.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0017.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0018.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0019.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0020.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0021.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0022.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0023.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0024.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0025.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0026.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0027.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0028.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0029.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0030.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0031.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0032.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0033.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0034.jpg",
+        "https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/content/0035.jpg",
 ]
 
 //加载页面
@@ -143,11 +143,11 @@ function loading() {
                     var tagHtml = "";
                     for (var i = 1; i <= 35; i++) {
                         if (i == 1) {
-                            tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
+                            tagHtml += ' <div id="first" style="background:url(https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else if (i == 35) {
-                            tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
+                            tagHtml += ' <div id="end" style="background:url(https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         } else {
-                            tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
+                            tagHtml += ' <div style="background:url(https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         }
                     }
                     $(".flipbook").append(tagHtml);
@@ -280,10 +280,10 @@ function hide(){
 function show(){
     if($("#content").is(':hidden')){　
         $("#content").fadeIn("slow");
-        $('#contentControl').find("img").attr('src','./image/function/back.png');
+        $('#contentControl').find("img").attr('src','https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/function/back.png');
     }else{
             $("#content").fadeOut("slow");
-            $('#contentControl').find("img").attr('src','./image/function/next.png');
+            $('#contentControl').find("img").attr('src','https://cdn.jsdelivr.net/gh/zuyiaaa/book/image/function/next.png');
     }
 }
 
